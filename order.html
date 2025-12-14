@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sticky Stickers</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+    <!-- Header with company name, navigation, and banner -->
+    <header>
+        <div id="head">
+            <img height="355" width="250" src="contact-images/stickystickersbanner.jpg" alt="Sticky Stickers Banner">
+        </div>
+        <h1><a href="index.html" class="title-link">Sticky Stickers</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="order.html">Order</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h3>Custom Stickers</h3>
+    <main class="configurator">
+        <!-- Left Panel: Product, Shape, and Upload -->
+        <section class="panel left-panel">
+            <h2>Product</h2>
+            <select id="product">
+                <option value="1">Die Cut Sticker</option>
+                <option value="1">Custom Sticker</option>
+                                <option value="1">Commercial Labels</option>
+                                 <option value="1">Sticker Templates</option>
+                                 <option value="1">Bulk Stickers</option>
+
+
+
+            </select>
+
+            <h2>Shape</h2>
+            <div class="grid" id="shape">
+                <div class="card">Circle</div>
+                <div class="card">Square</div>
+                <div class="card">Rounded Square</div>
+            </div>
+
+            <h2>Upload Artwork</h2>
+            <input type="file" id="upload" accept="image/*">
+            <img id="preview" hidden src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="Artwork preview placeholder">
+        </section>
+
+        <!-- Center Panel: Material and Finish -->
+        <section class="panel center-panel">
+            <h2>Material</h2>
+            <div class="grid" id="material">
+                <div class="card" data-mult="1.3">Vinyl</div>
+                <div class="card" data-mult="1.3">Holographic</div>
+                <div class="card" data-mult="1.2">Transparent</div>
+                <div class="card" data-mult="1.4">Glitter</div>
+                <div class="card" data-mult="1.5">Metallic</div>
+                <div class="card" data-mult="1.6">Foil</div>
+            </div>
+
+            <h2>Finish</h2>
+            <select id="finish">
+                <option value="1">Glossy</option>
+                <option value="1.1">Matte</option>
+            </select>
+        </section>
+
+        <!-- Right Panel: Size, Quantity, and Total -->
+        <section class="panel right-panel">
+            <h2>Size</h2>
+            <ul class="list" id="size">
+                <li data-price="1">2" × 2"</li>
+                <li data-price="1.5">3" × 3"</li>
+                <li data-price="2">4" × 4"</li>
+            </ul>
+
+            <h2>Quantity</h2>
+            <ul class="list" id="quantity">
+                <li data-qty="55">55 pcs</li>
+                <li data-qty="100">100 pcs</li>
+                <li data-qty="200">200 pcs</li>
+            </ul>
+
+            <div class="total">
+                Total: $<span id="total">0</span>
+            </div>
+            <button id="order-btn">Order Now</button>
+        </section>
+    </main>
+
+        <script src="order-js/order.js"></script>
+
+        <footer>
+            <p>&copy; 2025 Sticky Stickers. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
